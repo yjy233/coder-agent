@@ -9,6 +9,7 @@
     "ai": "node ai-agent.js",
     "examples": "node examples/coder-examples.js",
     "ai-examples": "node examples/ai-agent-examples.js",
+    "chat-demo": "node examples/chat-demo.js",
     "test": "node test.js"
   },
   "bin": {
