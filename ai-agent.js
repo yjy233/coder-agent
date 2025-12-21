@@ -19,6 +19,7 @@ class AICodingAgent {
       llmProvider: options.llmProvider || 'openai', // openai, anthropic, ollama
       model: options.model || 'gpt-4',
       apiKey: options.apiKey || process.env.LLM_API_KEY,
+      baseURL: options.baseURL || process.env.LLM_BASE_URL,
       mcpEnabled: options.mcpEnabled !== false,
       intelligentMode: options.intelligentMode !== false,
       temperature: options.temperature || 0.7,
