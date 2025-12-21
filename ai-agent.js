@@ -232,22 +232,27 @@ class AICodingAgent {
           JSON.parse(toolCall.function.arguments)
         );
         toolResults.push({
+          tool_call_id: toolCall.id,
           tool: toolCall.function.name,
           result
         });
       }
 
-      // Add tool results to conversation
+      // Add assistant message with tool calls
       this.conversationHistory.push({
         role: 'assistant',
         content: response.content || '',
         tool_calls: response.tool_calls
       });
 
-      this.conversationHistory.push({
-        role: 'tool',
-        content: JSON.stringify(toolResults)
-      });
+      // Add tool result messages (one per tool call, with tool_call_id)
+      for (const toolResult of toolResults) {
+        this.conversationHistory.push({
+          role: 'tool',
+          tool_call_id: toolResult.tool_call_id,
+          content: JSON.stringify(toolResult.result)
+        });
+      }
 
       // Get final response
       const finalResponse = await this.aiEngine.chat(

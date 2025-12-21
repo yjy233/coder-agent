@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#export LLM_PROVIDER="openai"
+#export LLM_API_KEY="e59b6575-0f0c-4cf1-b96f-6b7e9e2aed69"
+#export LLM_MODEL="ep-20251221220605-wts2s"
+#export LLM_BASE_URL="https://ark.cn-beijing.volces.com/api/v3/chat/completions"
 # AI Coding Agent 通用启动脚本
 # 使用 .env.local 中的配置启动
 
