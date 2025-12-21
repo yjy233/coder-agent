@@ -1,0 +1,38 @@
+{
+  "name": "ai-coding-agent",
+  "version": "1.0.0",
+  "description": "AI-powered coding assistant with LLM integration, MCP support, and intelligent tools",
+  "main": "ai-agent.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node coder-agent.js",
+    "ai": "node ai-agent.js",
+    "examples": "node examples/coder-examples.js",
+    "ai-examples": "node examples/ai-agent-examples.js",
+    "test": "node test.js"
+  },
+  "bin": {
+    "coder-agent": "./coder-agent.js",
+    "ai-agent": "./ai-agent.js"
+  },
+  "keywords": [
+    "ai",
+    "coding-assistant",
+    "llm",
+    "mcp",
+    "model-context-protocol",
+    "code-generation",
+    "intelligent-agent",
+    "openai",
+    "anthropic",
+    "tools"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "glob": "^10.5.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
